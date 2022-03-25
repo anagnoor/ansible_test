@@ -1,0 +1,9 @@
+---
+
+ - hosts: "{{ host_group }}"
+   vars: 
+      user: "ansible_new_user"
+      pass_value: " pass_value_from_playbook"
+   tasks:
+           - name: echo variable for group
+             shell: " echo {{ user }}  && echo {{ pass_value }}"

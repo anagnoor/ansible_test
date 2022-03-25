@@ -1,0 +1,26 @@
+---
+
+city:
+        - mumbai
+        - pune
+        - nashik
+        - nagpur
+        - aurangabad 
+
+dominos: 
+        - kharadi 
+        - viman_nagar
+        - chandan_nagar
+
+          #police_station:
+          #   location: kharadi 
+          #   area: near_zensar 
+          #   count: 10
+
+          #   location: viman_nagar
+          #   area: airforce
+          #   count: 20
+
+police_station:
+        - [location: viman_nagar, area: airforce, count: 20]
+        - [location: kharadi, area: near_zensar, count: 10]

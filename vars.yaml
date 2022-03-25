@@ -1,0 +1,10 @@
+---
+
+tomcat_user: "tomcat"
+tomcat_group: "tomcat_users"
+tomcat_home: "/opt/tomcat/"
+tomcat_version: "9.0.58"
+base_tomcat9_url: "https://dlcdn.apache.org/tomcat/tomcat-9"
+tomcat_tar_name: "apache-tomcat-{{ tomcat_version }}.tar.gz"
+tomcat_download_url: "{{ base_tomcat9_url }}/v{{ tomcat_version }}/bin/{{ tomcat_tar_name }}"
+

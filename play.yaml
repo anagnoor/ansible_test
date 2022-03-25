@@ -1,0 +1,18 @@
+---
+ - hosts: all
+   vars_files:
+     - ./httpd_vars.yaml
+   tasks:
+      - name: Install packages
+        yum: 
+           name: "{{package_name}}"
+           state: present
+      - name: Adding line in document
+        lineinfile: 
+           path: "{{index_path}"
+           line: Hello how are you!
+           create: yes
+      - name: start the service
+        service:
+           name: "{{service_name}}"
+           state: started   

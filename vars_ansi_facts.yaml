@@ -1,0 +1,7 @@
+---
+
+ - hosts: "{{ host_group }}"
+   tasks: 
+       - name: get information from ansible target machine using gather fact variable 
+         debug:
+                 var: ansible_facts[ 'default_ipv4'][ 'address' ]

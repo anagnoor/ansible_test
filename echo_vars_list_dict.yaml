@@ -1,0 +1,26 @@
+---
+
+ - hosts: "{{ host_group }}"
+   tasks:
+           - name: echo variable one by one from list
+             shell: " echo {{ item }}"
+             with_items:
+                     - "{{ city }}"
+           
+           - name: echo list of array at once
+             shell: " echo {{ city[0] }}"
+             #with_items:
+             #        - "{{ city }}"
+
+           - name: echo list of array at once
+             shell: " echo {{ city }}"
+
+# How to use/print dictionary variable in playbook
+           - name: print dictionary variable 
+             shell: " echo {{ police_station }}"  
+
+           - name: list the location of police station
+             shell: " echo {{ item.location }}"
+             with_items:
+                     - "{{ police_station }}"
+
